@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renato Zapata | Desarrollador Full Stack</title>
+    <style>
+        /* Variables de color */
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --bg-color: #f8fafc;
+            --text-main: #0f172a;
+            --text-light: #64748b;
+            --card-bg: #ffffff;
+        }
+
+        /* Reseteo básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Navegación */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 1100px;
+            margin: 100px auto 40px;
+            padding: 0 20px;
+        }
+
+        /* Hero Section (Sobre mi) */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 12px;
+            margin-bottom: 50px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+
+        /* Títulos de sección */
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+
+        /* Grid de Proyectos */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e2e8f0;
+            color: #475569;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Caso de Estudio */
+        .case-study {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin-bottom: 60px;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .case-study h3 {
+            color: var(--secondary-color);
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .case-study ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* Contacto */
+        .contact {
+            text-align: center;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--secondary-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: var(--text-light);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h2>RZ.</h2>
+            <div>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#caso-estudio">Caso de Estudio</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Renato Alfonso Zapata Donoso</h1>
+            <p>Desarrollador Full Stack | Talento Junior Tech</p>
+            <p style="font-size: 1rem; opacity: 0.9;">Apasionado por la creación de soluciones digitales eficientes, el trabajo ágil y el aprendizaje continuo en el ecosistema JavaScript.</p>
+            <a href="#contacto" class="btn">Contactar</a>
+        </section>
+
+        <!-- Proyectos -->
+        <section id="proyectos">
+            <h2 class="section-title">Mis Proyectos</h2>
+            <div class="projects-grid">
+                
+                <!-- Proyecto 1 -->
+                <div class="card">
+                    <h3>E-Commerce SPA (Full Stack)</h3>
+                    <div class="tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                    <p>Plataforma de comercio electrónico con carrito de compras y autenticación de usuarios mediante JWT.</p>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="card">
+                    <h3>API Gestor de Tareas</h3>
+                    <div class="tags">
+                        <span class="tag">Express</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Postman</span>
+                    </div>
+                    <p>API RESTful para la gestión ágil de tareas corporativas, con endpoints para operaciones CRUD optimizadas.</p>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="card">
+                    <h3>Dashboard del Clima</h3>
+                    <div class="tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">Fetch API</span>
+                    </div>
+                    <p>Aplicación web que consume una API pública externa para mostrar el pronóstico del clima en tiempo real.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Caso de Estudio -->
+        <section id="caso-estudio">
+            <h2 class="section-title">Caso de Estudio Destacado</h2>
+            <div class="case-study">
+                <h2>Diseño y Desarrollo de Plataforma E-commerce</h2>
+                
+                <h3>Breve descripción de la actividad</h3>
+                <p>Desarrollo de una plataforma E-commerce Single Page Application (SPA). El proyecto abarcó desde la creación de la interfaz de usuario para la navegación de productos y carrito de compras, hasta el desarrollo de la API y la base de datos para gestionar usuarios, autenticación y órdenes.</p>
+                
+                <h3>Desafío principal</h3>
+                <p>El reto más grande fue implementar un sistema de autenticación seguro y gestionar el estado global de la aplicación (el carrito de compras de los usuarios) de manera eficiente y persistente entre recargas de la página, sin afectar el rendimiento de renderizado.</p>
+                
+                <h3>Solución propuesta</h3>
+                <p>Para el frontend, implementé React utilizando Context API para el manejo del estado global del carrito. En el backend, construí una API REST con Node.js y Express, integrando JSON Web Tokens (JWT) para proteger las rutas privadas y encriptando las contraseñas con bcrypt.</p>
+                
+                <h3>Herramientas técnicas utilizadas</h3>
+                <p>JavaScript, React.js, Node.js, Express, MongoDB (Mongoose), Git/GitHub (control de versiones) y Postman para pruebas de API.</p>
+                
+                <h3>Principales aprendizajes</h3>
+                <p>Consolidé mi comprensión sobre el ciclo de vida de los componentes web y la comunicación asíncrona entre el cliente y el servidor. Además, aprendí a estructurar la lógica del backend separando las rutas, controladores y modelos (MVC).</p>
+                
+                <h3>Métricas de impacto logradas</h3>
+                <ul>
+                    <li><strong>Funcionalidad:</strong> 100% de las rutas críticas (checkout y perfil de usuario) protegidas exitosamente mediante middlewares de autenticación.</li>
+                    <li><strong>Eficiencia:</strong> Tiempos de respuesta de la API inferiores a 200ms en consultas a la base de datos.</li>
+                    <li><strong>Despliegue:</strong> Puesta en producción exitosa utilizando plataformas cloud.</li>
+                </ul>
+
+                <h3>Habilidades técnicas aplicadas</h3>
+                <p>Desarrollo Full Stack JavaScript, diseño de APIs RESTful, modelado de bases de datos NoSQL y consumo de servicios web.</p>
+
+                <h3>Justificación de elección</h3>
+                <p>Decidí destacar este proyecto porque demuestra mi capacidad para construir una solución de software de principio a fin (End-to-End). Refleja autonomía técnica, conocimiento de tecnologías muy demandadas en el mercado laboral y la resolución de problemas lógicos propios de aplicaciones reales en producción.</p>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="contact">
+            <h2 class="section-title">Contáctame</h2>
+            <p>¿Interesado en mi perfil? Puedes encontrarme en mis redes profesionales o enviarme un correo.</p>
+            <div style="margin-top: 20px;">
+                <a href="https://www.linkedin.com/in/renato-zapata-donoso-062113378/" class="btn">LinkedIn</a>
+                <a href="https://github.com/renatozapatad" class="btn" style="background-color: #333;">GitHub</a>
+                <a href="mailto:renato.zapata@inacapmail.cl" class="btn" style="background-color: #059669;">Enviar Email</a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Renato Zapata. Desarrollado para el Proyecto Módulo 9.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
